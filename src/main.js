@@ -1,4 +1,7 @@
-import { initTheme } from "./helpers/theme";
+import { checkRouteAccess, logout } from "./helpers/auth";
+import { updateHeader } from "./helpers/header";
+import { initViewLogic } from "./helpers/logicViews";
+import { initTheme, toggleTheme } from "./helpers/theme";
 
 export const routes = {
   "/landingPage":   { component: landingPageView,   private: false },

@@ -1,4 +1,6 @@
 import { landinPageHeader } from "../headers/landingPage";
+import { navAdminHeader } from "../headers/navAdmin";
+import { navComercialHeader } from "../headers/navComercial";
 
 export function updateHeader() {
   const header = document.getElementById("app-header");
