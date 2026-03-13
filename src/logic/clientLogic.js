@@ -5,13 +5,13 @@ import {
 } from "./projectsShared.js";
 import { initProfileLogic } from "./profileShared.js";
  
-// ─── CITAS (hardcoded for demo) ───────────────────────────
+// APPOINTMENTS hardcoded for demo
 let citasList = [
   { asunto:"Demo E-Commerce",  seller:"Laura Restrepo",   fecha:"2026-03-05T10:00", tipo:"Demo de proyecto", notas:"Revisar plataforma", source:"manual" },
   { asunto:"Seguimiento CRM",  seller:"Roberto Martínez", fecha:"2026-03-06T14:30", tipo:"Seguimiento",      notas:"Revisar avances",   source:"manual" },
 ];
  
-// ─── RENDER CITAS ─────────────────────────────────────────
+// RENDER APPOINTEMENTS
 function renderCitas() {
   const container = document.getElementById("citasList");
   if (!container) return;
@@ -48,7 +48,7 @@ function renderCitas() {
   );
 }
  
-// ─── CITAS CRUD ───────────────────────────────────────────
+// APPOINTMENTS CRUD
 function createCita(e) {
   e.preventDefault();
   citasList.push({
@@ -90,7 +90,7 @@ function saveEditCita(e) {
   renderCitas();
 }
  
-// ─── AI CHAT ──────────────────────────────────────────────
+// AI CHAT
 function sendAiMsg() {
   const input = document.getElementById("aiInput");
   const text  = input.value.trim();
@@ -100,7 +100,7 @@ function sendAiMsg() {
   input.value = "";
   const lower = text.toLowerCase();
  
-  // Intent: agendar cita
+  // Intent: SCHEDULE APPOINTMENT 
   if (["agendar","cita","reunión","reunion","programar"].some(kw => lower.includes(kw))) {
     setTimeout(() => {
       const tomorrow = new Date();
@@ -145,7 +145,7 @@ function sendAiMsg() {
     return;
   }
  
-  // Intent: buscar proyectos → real AI
+  // Intent: SEARCH FOR PROJECTS → real AI
   msgs.innerHTML += `<div class="ai-msg bot typing">Buscando...</div>`;
   msgs.scrollTop = msgs.scrollHeight;
  
@@ -157,7 +157,7 @@ function sendAiMsg() {
   });
 }
  
-// ─── INIT ─────────────────────────────────────────────────
+// INIT 
 export function clientLogic() {
   loadProjects(renderProjects);
   renderCitas();
