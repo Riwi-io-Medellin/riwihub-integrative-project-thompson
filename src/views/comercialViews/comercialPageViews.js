@@ -1,5 +1,5 @@
+import '../../styles/dashboard.css';
 import '../../styles/base.css';
-import '../../styles/dashboards.css';
 import { appointmentComercialView } from "./appointmentComercialView";
 import { availabilityComercialView } from "./availabilityComercialView";
 import { profileComercialView } from "./profileComercialView";

@@ -1,6 +1,8 @@
 import { landinPageHeader } from "../headers/landingPage";
 import { navAdminHeader } from "../headers/navAdmin";
+import { navClientHeader } from "../headers/navClient";
 import { navComercialHeader } from "../headers/navComercial";
+import { isAuthenticated } from "./auth";
 
 export function updateHeader() {
   const header = document.getElementById("app-header");

@@ -1,8 +1,9 @@
 import '../../styles/base.css';
-import '../../styles/dashboards.css';
-import { appointmentClientView } from "./appointmentClientView";
-import { profileClientView } from "./profileClientView";
-import { projectsClientView } from "./projectsClientViews";
+import '../../styles/dashboard.css';
+import { appointmentClientView } from "./appointmentClientViews.js";
+import { profileClientView } from "./profileClientView.js";
+import { projectsClientView } from './projectsClientsViews.js';
+
 
 export function clientPageViews() {
   return `
