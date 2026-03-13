@@ -1,0 +1,81 @@
+
+@import url("./base.css");
+
+/* Principal Layout */
+
+.projects-layout    { display: grid; grid-template-columns: 340px 1fr; gap: 24px; }
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* AI Chat panel */
+.ai-chat            { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); display: flex; flex-direction: column; height: calc(100vh - 140px); position: sticky; top: 84px; }
+.ai-chat-header     { padding: 16px; border-bottom: 1px solid var(--border); font-weight: 600; font-size: .9rem; display: flex; align-items: center; gap: 8px; font-family: 'Bebas Neue', sans-serif; }
+.ai-chat-header span { color: var(--primary); }
+.ai-messages        { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.ai-msg             { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: .85rem; line-height: 1.5; }
+.ai-msg.bot         { background: hsla(250,55%,48%,0.1); color: var(--primary); align-self: flex-start; border-bottom-left-radius: 4px; }
+.ai-msg.user        { background: var(--secondary); align-self: flex-end; border-bottom-right-radius: 4px; }
+.ai-input-wrap      { padding: 12px; border-top: 1px solid var(--border); display: flex; gap: 8px; }
+.ai-input-wrap input { flex: 1; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; color: var(--fg); font-size: .85rem; outline: none; font-family: 'Inter', sans-serif; transition: border-color .2s; }
+.ai-input-wrap input:focus { border-color: var(--primary); }
+.ai-input-wrap button { background: linear-gradient(135deg, var(--primary), var(--primary)); border: none; color: var(--primary-fg); padding: 10px 16px; border-radius: 8px; cursor: pointer; font-size: .85rem; font-weight: 500; transition: .2s; }
+.ai-input-wrap button:hover { box-shadow: 0 0 20px -5px hsla(250,55%,48%,0.3); }
+.ai-summary-box     { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-top: 16px; }
+.ai-summary-box h4  { font-size: .85rem; color: var(--primary); margin-bottom: 8px; }
+.ai-summary-box p   { font-size: .8rem; color: var(--fg); line-height: 1.6; }
+
+/* Appointments */
+.citas-grid         { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.cita-card          { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.cita-card h2       { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; }
+.meeting-item       { display: flex; align-items: center; justify-content: space-between; padding: 14px; border-radius: 10px; background: var(--surface); margin-bottom: 10px; border: 1px solid var(--border); transition: border-color .2s; }
+.meeting-item:hover { border-color: hsla(250,55%,48%,0.2); }
+.meeting-item .mi-info h4 { font-size: .9rem; font-weight: 600; margin-bottom: 2px; }
+.meeting-item .mi-info p  { font-size: .75rem; color: var(--muted); }
+.meeting-actions    { display: flex; gap: 4px; align-items: center; }
+
+/* Availability slots */
+.avail-grid         { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; margin-top: 12px; }
+.avail-slot         { padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); text-align: center; cursor: pointer; transition: .2s; font-size: .8rem; }
+.avail-slot:hover   { border-color: var(--primary); }
+.avail-slot.active  { background: hsla(250,55%,48%,0.1); border-color: var(--primary); color: var(--primary); }
+.avail-slot .day    { font-weight: 600; font-size: .75rem; margin-bottom: 2px; }
+.avail-slot .time   { font-size: .7rem; color: var(--muted); }
+
+/* Notifications */
+.notif-item         { padding: 12px; border-radius: 8px; background: var(--surface); border: 1px solid var(--border); margin-bottom: 8px; font-size: .8rem; display: flex; align-items: center; gap: 10px; }
+.notif-item .notif-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
+.notif-item.unread  { border-color: hsla(250,55%,48%,0.3); }
+
+/* Team members form */
+.team-members-wrap  { display: flex; flex-direction: column; gap: 8px; }
+.team-member-row    { display: flex; gap: 8px; align-items: center; }
+.team-member-row input { flex: 1; }
+.team-member-row button { background: none; border: 1px solid var(--danger); color: var(--danger); border-radius: 6px; padding: 6px 10px; cursor: pointer; font-size: .75rem; font-family: 'Inter', sans-serif; transition: .2s; }
+.team-member-row button:hover { background: hsla(0,70%,50%,0.08); }
+.add-member-btn     { font-size: .75rem; padding: 6px 12px; border-radius: 6px; border: 1px dashed var(--primary); background: none; color: var(--primary); cursor: pointer; transition: .2s; font-family: 'Inter', sans-serif; align-self: flex-start; }
+.add-member-btn:hover { background: hsla(250,55%,48%,0.06); }
+
+/* Star rating */
+.star-rating        { display: flex; gap: 4px; }
+.star-rating span   { font-size: 1.3rem; cursor: pointer; opacity: 0.3; transition: opacity .15s; }
+.star-rating span.active { opacity: 1; }
+
+/* Modal */
+.modal .modal-thumb { width: 100%; height: 200px; background: var(--surface); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 4rem; margin-bottom: 20px; }
+.modal .modal-meta  { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+.modal .modal-meta div { font-size: .8rem; color: var(--muted); }
+.modal .modal-meta div strong { color: var(--fg); }
+.modal-btns         { display: flex; gap: 10px; margin-top: 16px; }
+.modal .team-list   { margin-top: 12px; }
+.modal .team-list h4 { font-size: .85rem; margin-bottom: 8px; color: var(--primary); }
+.modal .team-list .team-member { display: inline-block; padding: 4px 10px; border-radius: 6px; background: hsla(350,65%,55%,0.1); color: var(--accent); font-size: .75rem; font-weight: 500; margin: 2px 4px 2px 0; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projects-layout  { grid-template-columns: 1fr; }
+  .ai-chat          { position: static; height: 350px; margin-bottom: 16px; }
+  .citas-grid       { grid-template-columns: 1fr; }
+}

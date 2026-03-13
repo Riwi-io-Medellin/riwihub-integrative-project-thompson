@@ -1,7 +1,7 @@
 import { navigate, routes } from "../main.js";
 import { authAPI, clearSession } from "./api.js";
 
-// ─── AUTH STATE ───────────────────────────────────────────
+// AUTH STATE
 export function isAuthenticated() {
   const token    = localStorage.getItem("accessToken");
   const userData = localStorage.getItem("userData");
@@ -23,15 +23,15 @@ export async function logout() {
 
   } finally {
     clearSession();
-    navigate("/landingPage"); // navigate() is global from main.js
+    navigate("/landingPage");
   }
 }
 
-// ─── ROUTE GUARD ──────────────────────────────────────────
+// ROUTE GUARD
 export function checkRouteAccess(pathname) {
   const isLoggedIn = isAuthenticated();
   const userData   = getUserData();
-  const role       = userData?.role; // "admin" | "cliente" | "comercial" (lowercase from backend)
+  const role       = userData?.role; // "admin" | "cliente" | "comercial"
 
   const publicRoutes = Object.keys(routes).filter(r => !routes[r].private);
 

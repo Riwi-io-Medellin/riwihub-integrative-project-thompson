@@ -1,3 +1,10 @@
+import { adminLogic } from "../logic/adminLogic";
+import { clientLogic } from "../logic/clientLogic";
+import { comercialLogic } from "../logic/comercialLogic";
+import { landingPageLogic } from "../logic/landingPageL";
+import { loginLogic } from "../logic/loginLogic";
+import { registerLogic } from "../logic/registerLogic";
+
 export function initViewLogic(path) {
 
     if (path === "/login") {

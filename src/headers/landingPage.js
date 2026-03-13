@@ -1,4 +1,5 @@
-
+import '../styles/base.css';
+import '../styles/landing.css';
 
 export function landinPageHeader() {
 
