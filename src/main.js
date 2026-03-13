@@ -1,3 +1,4 @@
+import { initTheme } from "./helpers/theme";
 
 export const routes = {
   "/landingPage":   { component: landingPageView,   private: false },
@@ -32,6 +33,10 @@ document.body.addEventListener("click", (e) => {
     e.preventDefault();
     navigate(e.target.getAttribute("href"));
     return;
+  }
+  // Theme
+  if (e.target.closest(".theme-toggle")) {
+    toggleTheme(); return;
   }
 
   // Logout

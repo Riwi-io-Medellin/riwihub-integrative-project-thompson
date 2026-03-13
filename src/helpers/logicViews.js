@@ -1,3 +1,5 @@
+import { landingPageLogic } from "../logic/landingPageL";
+
 export function initViewLogic(path) {
 
     if (path === "/login") {
