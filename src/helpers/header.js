@@ -1,3 +1,4 @@
+import { landinPageHeader } from "../headers/landingPage";
 
 export function updateHeader() {
   const header = document.getElementById("app-header");

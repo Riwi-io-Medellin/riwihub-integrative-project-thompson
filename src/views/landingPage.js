@@ -1,3 +1,5 @@
+import '../styles/landing.css';
+
 export function landingPageView() {
   return `<section class="hero">
     <div class="hero-bg"></div>
