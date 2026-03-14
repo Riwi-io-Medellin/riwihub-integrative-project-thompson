@@ -24,6 +24,7 @@ export async function logout() {
   } finally {
     clearSession();
     navigate("/landingPage");
+    window.location.href = "/";
   }
 }
 
