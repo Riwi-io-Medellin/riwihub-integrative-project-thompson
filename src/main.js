@@ -1,6 +1,7 @@
 import { checkRouteAccess, logout } from "./helpers/auth";
 import { updateHeader } from "./helpers/header";
 import { initViewLogic } from "./helpers/logicViews";
+import { showPage } from "./helpers/showPage";
 import { initTheme, toggleTheme } from "./helpers/theme";
 import { adminPageViews } from "./views/adminViews/adminPageViews";
 import { clientPageViews } from "./views/clientViews/clientPageView";
