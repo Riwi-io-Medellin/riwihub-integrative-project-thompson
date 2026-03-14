@@ -39,8 +39,8 @@ app.use('/api/coders', authenticate,  coderRouter);
 // Since user registration is protected, see the README.md
 
 // Protected routes that require authentication and admin role
-// app.use('/api/users', authenticate, authorize('admin'), userRouter )
-app.use('/api/users', userRouter)
+app.use('/api/users', authenticate, authorize('admin'), userRouter )
+// app.use('/api/users', userRouter)
 
 
 app.use('/api/technologies', authenticate, technologyRouter);
