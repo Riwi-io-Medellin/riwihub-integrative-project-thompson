@@ -50,7 +50,7 @@ export const getAllCoders = async (filters = {}) => {
         result = await selectBy(createConnectionPool, table, idField, filters.id);
 
     } else if (filters.name) {
-        result = await selectBy(createConnectionPool, table, idField, filters.name);
+        result = await selectBy(createConnectionPool, table, nameField, filters.name);
 
     } else {
         result = await selectAll(createConnectionPool, table);

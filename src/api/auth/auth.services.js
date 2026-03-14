@@ -10,7 +10,7 @@
 // Import necessary modules
 import { createConnectionPool } from "../../config/MySQL/mysql.db.js";
 import { z } from "zod";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 // ... existing code ...
