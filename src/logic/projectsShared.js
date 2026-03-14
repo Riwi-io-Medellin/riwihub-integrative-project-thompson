@@ -1,5 +1,5 @@
 import { projectsAPI, mediaProjectsAPI } from "../helpers/api.js";
-import { aiChatInit, aiChat, aiProjectSummary, getAiRole, getCompanyName } from "../helpers/Aiapi.js";
+import { aiChatInit, aiChat, aiProjectSummary, getAiRole, getCompanyName } from "../helpers/aiApi.js";
  
 // SHARED STATE
 export let projectsList     = [];
