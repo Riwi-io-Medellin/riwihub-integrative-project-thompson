@@ -30,9 +30,9 @@ export const login = async (req, res) => {
 
         res.cookie('refreshToken', refreshToken, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
-            maxAge: 3 * 24 * 60 * 60 * 1000 // 3 days in milliseconds, consistent with JWT expiration
+            secure: true,
+            sameSite: 'none',
+            maxAge: 3 * 24 * 60 * 60 * 1000
         });
 
         // If login is successful, respond with a 200 status (OK) and a success message,
