@@ -17,7 +17,7 @@ config();
 const app = express();
 
 const corsOptions = {
-    origin: ['http://localhost:5173','http://localhost'],
+    origin: ['http://localhost:5173','http://localhost','https://riwihub-backend-production.up.railway.app'],
     credentials: true,               // allow credentials (cookies, authorization headers, etc.)
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
