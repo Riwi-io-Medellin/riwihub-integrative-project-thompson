@@ -1,7 +1,7 @@
 import { navigate } from "../main";
 
-const API_URL  = "http://localhost:3000/api";
-const AUTH_URL = "http://localhost:3000/auth";
+const AUTH_URL = "https://riwihub-backend-production.up.railway.app/auth";
+const API_URL  = "https://riwihub-backend-production.up.railway.app/api";
 
 // TOKEN MANAGEMENT
 export function getAccessToken() {

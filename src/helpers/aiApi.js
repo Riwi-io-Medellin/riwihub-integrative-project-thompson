@@ -1,4 +1,4 @@
-const AI_URL = "http://localhost:8001/api";
+const AI_URL = "https://riwihub-agent-production.up.railway.app/api";
  
 // Map backend roles to AI roles
 const roleMap = {
