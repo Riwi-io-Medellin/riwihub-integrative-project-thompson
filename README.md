@@ -1,7 +1,5 @@
 # Backend-RiwiHub
 
-## Architecture Overview
-
 This project uses a **Feature-based Layered Architecture**, which is a modern and scalable approach for building backend applications. It is designed to be highly modular and maintainable.
 
 ## Architecture Overview
