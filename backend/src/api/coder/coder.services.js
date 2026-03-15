@@ -123,11 +123,11 @@ export const saveCoder = async (data) => {
                 coderIds.push(result.insertId);
             }
         }
-        return coderIds; // Retornamos los IDs para que el controlador los use
+        return coderIds; 
     } else {
         const validatedData = coderSchema.parse(data);
         const result = await insertIntoTable(createConnectionPool, table, validatedData);
-        return [result.insertId]; // Retornamos como array para consistencia
+        return [result.insertId]; 
     }
 
 }
