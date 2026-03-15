@@ -122,7 +122,7 @@ export const updateProject = async (req, res) => {
 
         // Delegate to the service layer to update the project by ID with the provided data.
         await projectService.updateProject(req.params.id, req.body);
-        res.json({ message: "Coder actualizado con éxito" });
+        res.json({ message: "Proyecto actualizado con éxito" });
 
     } catch (error) {
 
@@ -143,7 +143,7 @@ export const deleteProject = async (req, res) => {
     try {
         // Delegate to the service layer to delete the project by ID.
         await projectService.deleteProject(req.params.id);
-        res.json({ message: "Coder eliminado con éxito" });
+        res.json({ message: "Proyecto eliminado con éxito" });
     } catch (error) {
 
         handleError(res, error);
