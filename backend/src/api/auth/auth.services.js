@@ -54,7 +54,7 @@ const generateTokens = (user) => {
     const refreshToken = jwt.sign(
         { userId: user.user_id },
         process.env.JWT_SECRET,
-        { expiresIn: process.env.JWT_REFRESH_EXPIRES_IN || '3d' } // Aseguramos consistencia: 3 días para el JWT
+        { expiresIn: process.env.JWT_REFRESH_EXPIRES_IN || '3d' } 
     );
 
     return { accessToken, refreshToken };
